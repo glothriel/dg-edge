@@ -6,7 +6,6 @@ Prints Hello world once per second. No dependencies.
 
 Operaton prepares `release/<version>` and release notes. Every `v*` tag builds a Linux amd64 Docker image and a draft with `SHA256SUMS`. RCs are prereleases, never latest. Final tags rebuild approved code; Operaton publishes successful final builds as latest.
 
-blah
 
 Download both release files, then run:
 
