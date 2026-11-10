@@ -1,11 +1,11 @@
-# dg-edge 0.2.1
+- Super feature 1
+- Super feature 2
+- Super feature 3
 
-Four-component RC integration test
+Final build from approved `v0.3.0-rc.1` application code.
 
-Final build from approved `v0.2.1-rc.1` application code.
+Blog: http://foo.bar.baz
 
-Blog: https://example.test/blog-draft
+Migration coverage: adad
 
-Migration coverage: All four demo apps
-
-Compatibility notes: None
+Compatibility notes: adada
