@@ -1,4 +1,4 @@
-# dg-edge 0.2.1-rc.0
+# dg-edge 0.2.1-rc.1
 
 ## Scope
 
