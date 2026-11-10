@@ -2,7 +2,7 @@ name: Release
 
 on:
   push:
-    tags: ['v*-rc.*']
+    tags: ['v*']
 
 permissions:
   contents: write
@@ -43,4 +43,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           test "$(jq -r .tag .release/context.json)" = "$GITHUB_REF_NAME"
-          gh release create "$GITHUB_REF_NAME" dist/* --verify-tag --draft --prerelease --latest=false --title "dg-edge $GITHUB_REF_NAME" --notes-file .release/notes.md
+          flags=(--draft --latest=false)
+          if [[ "$GITHUB_REF_NAME" == *-rc.* ]]; then flags+=(--prerelease); fi
+          gh release create "$GITHUB_REF_NAME" dist/* --verify-tag "${flags[@]}" --title "dg-edge $GITHUB_REF_NAME" --notes-file .release/notes.md

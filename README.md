@@ -4,7 +4,7 @@ Minimal Operaton testing demo.
 
 Prints Hello world once per second. No dependencies.
 
-Operaton prepares `release/<version>` and `.release/notes.md`. A `v*-rc.*` tag builds a Linux amd64 Docker image and a draft prerelease with `SHA256SUMS`, never latest. Final releases reuse approved RC assets without rebuilding.
+Operaton prepares `release/<version>` and release notes. Every `v*` tag builds a Linux amd64 Docker image and a draft with `SHA256SUMS`. RCs are prereleases, never latest. Final tags rebuild approved code; Operaton publishes successful final builds as latest.
 
 Download both release files, then run:
 
