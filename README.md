@@ -4,7 +4,7 @@ Minimal Operaton testing demo.
 
 Prints Hello world once per second. No dependencies.
 
-Push a `v*` tag to build a Linux amd64 Docker image and publish it with `SHA256SUMS` in GitHub Releases.
+Operaton prepares `release/<version>` and `.release/notes.md`. A `v*-rc.*` tag builds a Linux amd64 Docker image and a draft prerelease with `SHA256SUMS`, never latest. Final releases reuse approved RC assets without rebuilding.
 
 Download both release files, then run:
 
