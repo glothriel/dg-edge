@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build --platform linux/amd64 -t "dg-edge:$GITHUB_REF_NAME" .
+      - name: Smoke test
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run -d --name smoke "dg-edge:$GITHUB_REF_NAME"
+          trap 'docker rm -f smoke >/dev/null' EXIT
+          sleep 3
+          docker logs smoke > smoke.log
+          cat smoke.log
+          test "$(grep -c '^Hello world from dg-edge$' smoke.log)" -ge 2
+          test "$(docker inspect -f '{{.State.Running}}' smoke)" = true
+      - name: Package and checksum
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          docker save "dg-edge:$GITHUB_REF_NAME" | gzip -1 > "dist/dg-edge-$GITHUB_REF_NAME-docker-linux-amd64.tar.gz"
+          cd dist
+          sha256sum *.tar.gz > SHA256SUMS
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/* --verify-tag --title "dg-edge $GITHUB_REF_NAME" --notes "Minimal Operaton testing demo."
