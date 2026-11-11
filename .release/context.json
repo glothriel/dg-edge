@@ -1,8 +1,8 @@
 {
-  "version": "0.3.0",
-  "instance": "030b27a3-dd54-11f1-bcfa-a6551880ef3b",
-  "task": "0c7cd316-dd5d-11f1-bcfa-a6551880ef3b",
-  "tag": "v0.3.0",
-  "sourceRc": "v0.3.0-rc.1",
-  "sourceSha": "0d93351071103bffda15b8bd1a539189cbc04499"
+  "version": "0.4.0",
+  "instance": "7fcd8be6-dd5d-11f1-bcfa-a6551880ef3b",
+  "task": "0b22d4de-dd9a-11f1-bcfa-a6551880ef3b",
+  "tag": "v0.4.0",
+  "sourceRc": "v0.4.0-rc.0",
+  "sourceSha": "324b65867e4de7e06cf33ceb71fd043c94975db0"
 }
