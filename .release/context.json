@@ -3,6 +3,8 @@
   "instance": "989864eb-de75-11f1-95ba-f265c5c1e378",
   "baseTag": "v0.1.0",
   "baseSha": "666adabbdb00017dcfc2dafd011931fbaeecc07c",
-  "task": "d1466f2c-de75-11f1-95ba-f265c5c1e378",
-  "tag": "v0.1.1-rc.0"
+  "task": "092394ff-de76-11f1-95ba-f265c5c1e378",
+  "tag": "v0.1.1",
+  "sourceRc": "v0.1.1-rc.0",
+  "sourceSha": "d30172dd7d7fb4b406047a42ae61d1e0b91f94e8"
 }
