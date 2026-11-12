@@ -2,6 +2,21 @@
   "version": "0.8.0",
   "instance": "87a73b46-ded5-11f1-9f5e-ae2e6755a954",
   "baseSha": "960b539ef697e3d32efa7f7b23fa6f59a94ea4bc",
-  "task": "4b5882b3-ded8-11f1-9f5e-ae2e6755a954",
-  "tag": "v0.8.0-rc.1"
+  "task": "22d32b44-ded9-11f1-9f5e-ae2e6755a954",
+  "tag": "v0.8.0",
+  "projectId": "edge",
+  "repository": "glothriel/dg-edge",
+  "catalogSha256": "54f3507a45e43b52dbe06890a34c93160dac7ea710fbab7bfb5f1b151ca30a97",
+  "sourceRc": "v0.8.0-rc.1",
+  "payloads": [
+    {
+      "payloadId": "docker-linux-amd64",
+      "sourceName": "dg-edge-v0.8.0-rc.1-docker-linux-amd64.tar.gz",
+      "name": "dg-edge-v0.8.0-docker-linux-amd64.tar.gz",
+      "sha256": "107d7b7988ee49218f216314a768952970bacbe9c95614ab6ed8e46eae190182",
+      "size": 771749,
+      "signing": "none"
+    }
+  ],
+  "sourceSha": "78b688197072a6f8a0bd6009f064d4b33fa51287"
 }
