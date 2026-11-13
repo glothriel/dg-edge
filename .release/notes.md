@@ -1,3 +1,4 @@
-Release candidate for 0.7.2.
+## Commits
 
-Commit notes are generated automatically after successful build verification.
+- Initialize demo patch 0.7.2 (2aef36f)
+- Prepare demo candidate v0.7.2-rc.0 (b1a8c1f)
